@@ -1,0 +1,53 @@
+Portfolio Guide
+===============
+
+Welcome to FolioSmith – a powerful, no-code tool that helps you generate a professional portfolio website in minutes!
+
+Features
+--------
+• Choose from pre-designed, modern templates  
+• Fill in your personal information, skills, certifications, and projects  
+• Upload your profile image  
+• Download a complete website as a ZIP file (HTML + image)  
+• No coding or design experience required  
+
+How to Host Your Portfolio for Free
+-----------------------------------
+
+After downloading and extracting the ZIP file, you’ll see:
+- index.html
+- Your uploaded image (e.g., profile.jpg)
+
+Now you can upload your site using one of these free platforms:
+
+• Neocities – https://neocities.org  
+  - Sign up and create a new site  
+  - Drag and drop index.html and your image file  
+  - Your portfolio goes live instantly  
+
+• Netlify Drop – https://app.netlify.com/drop  
+  - Go to Netlify Drop  
+  - Drag and drop the extracted files  
+  - Netlify gives you a live site link immediately  
+
+• Vercel – https://vercel.com/  
+  - Create an account and start a new project  
+  - Upload your files or connect to a GitHub repo  
+  - Vercel automatically deploys your site  
+
+• GitHub Pages (For Developers) – https://pages.github.com/  
+  - Push your site files to a GitHub repository  
+  - Enable GitHub Pages from the repository settings  
+  - Access your site at: https://yourusername.github.io/your-repo  
+
+Notes
+-----
+• Keep the image file name unchanged (or update the HTML reference if renamed)  
+• Do not remove or rename index.html  
+• You can re-generate and host your updated portfolio anytime  
+
+Thank You!
+----------
+Thank you for using Portfolio Builder! We hope this tool helps you present your work and personality in the best possible light.
+
+Feel free to share your portfolio link and inspire others to build theirs too!
