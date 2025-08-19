@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Naveen Kumar S | Portfolio</title>
+  <style>
+    :root {
+      --primary: #f4a261;
+      --dark: hsl(0, 0%, 7%);
+      --dark-gray: hsl(240, 2%, 13%);
+      --medium-gray: hsl(0, 0%, 22%);
+      --light-gray: #ccc;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--white);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      z-index: -1;
+    }
+
+    .profile-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--primary);
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(244, 162, 97, 0.3);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .name-highlight {
+      color: var(--primary);
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: var(--light-gray);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: var(--dark-gray);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--medium-gray);
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skills-list li {
+      list-style: none;
+      background-color: rgba(244, 162, 97, 0.1);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .skills-list :hover {
+      cursor: none;
+      background-color: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background-color: rgba(244, 162, 97, 0.1);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+  
+
+    .project h3{
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .project p {
+      color: var(--light-gray);
+      margin-bottom: 1rem;
+    }
+
+    .project a {
+    color: var(--primary);
+    font-size:20px ;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+   .certifications-list {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      
+      list-style: none;
+      border-left: 3px solid var(--primary);
+    }
+
+    .certifications-list h2 {
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .certifications-list li {
+      color: var(--light-gray);
+      /* line-height: 10px; */
+      font-size: 0.9rem;
+    }
+
+    .contact-section {
+      border-top-left-radius: 150px;
+      border-top-right-radius: 150px;
+
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: rgba(244, 162, 97, 0.05);
+      margin-top: 3rem;
+    }
+
+    .contact-heading {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-section a {
+      color: var(--dark);
+      background-color: var(--primary);
+      text-decoration: none;
+      font-size: 2rem;
+      margin: 10px;
+
+      margin-top: 100px;
+      padding: 5px;
+      border-radius:30px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+    }
+      .custom-section {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      
+      list-style: none;
+      border-left: 3px solid var(--primary);
+    }
+
+    .custom-section h2 {
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .custom-section li {
+      margin-top: 20px;
+      color: var(--light-gray);
+      font-size: 0.9rem;
+    }
+    .custom-section p {
+      color: var(--light-gray);
+      margin-bottom: 1rem;
+    }
+
+
+    footer {
+      background-color: rgba(244, 162, 97, 0.05);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .contact-heading {
+        font-size: 2.2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .profile-image {
+        width: 150px;
+        height: 150px;
+      }
+
+      .contact-heading {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Naveen Kumar S" class="profile-image" />
+    <h1>Hello, I'm <span class="name-highlight">Naveen Kumar S</span></h1>
+    <p class="tagline">Innovative Full-Stack Software Developer with a strong
+ background in building and maintaining web applications using
+ modern technologies such as JavaScript, HTML, CSS, and SQL
+ databases. Committed to creating efficient solutions that
+ enhances user engagement and meet client expectations.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Skills</h2>
+      <div class="skills-list"><li>JAVA</li><li>HTML& CSS</li><li>PYTHON</li><li>JAVASCRIPT</li><li>Soft Skills : Leadership,Time Management,Communication Skills,Collaboration,Creative Thinking</li></div>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="projects-grid"><div class="project"><h3> NutriScan</h3><p>NutriScan quickly scans packed or prepared food and  analyzes ingredients in under 500 milliseconds.  It gives personalized health tips using your profile, real-time  BMI, and cravings to suggest healthy recipes.  The app uses OCR, nutrition APIs, and leftover tracking to  support smart, zero-waste cooking.</p><a href="https://github.com/naveenkumarkds/Nutriscan-Django-" target="_blank">View Project</a></div><div class="project"><h3>Intercommunication App</h3><p>Built a full-stack student communication app for web and  mobile using HTML, CSS, JavaScript, Servlet, MySQL, and  Java  Supports academic discussions, project tracking, private notes,  and announcements  Helps students collaborate and stay connected across  departments</p></div></div>
+    </section>
+
+    <section class="card">
+      <h2>Certifications</h2>
+      <div class="certifications-list"><li>Problem-Solving through Python  Programming and  IoT on NPTEL.</li><li>AWS Certified Cloud practitioner.</li><li>Gen AI workshop (AVANTA’24)</li></div>
+    </section>
+    <section class="card"><div class="custom-section"><h2>INTERNSHIP</h2><ul><li>Web Development Intern at Codebind Technologies (May 2023)</li><li>Java Intern at Systech Solutions (June 2024)</li></ul></div></section>
+  </main>
+
+
+  <section class="contact-section">
+    <h2 class="contact-heading">Let's Connect</h2>
+    <div class="contact-links">
+          <div class="contact">
+            <h3><i class="fas fa-phone"></i> 9585546104</h3>
+            <h3><i class="fas fa-envelope"></i> naveenkumarkds45@gmail.com</h3>
+            <a href="https://www.linkedin.com/in/naveen-kumar-713b30257/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/naveenkumarkds" target="_blank"><i class="fab fa-github"></i></a>
+          </div></div>
+  </section>
+
+  <footer>
+    <p>&copy;Naveen Kumar S. All rights reserved.</p>
+  </footer>
+</body>
+</html>
